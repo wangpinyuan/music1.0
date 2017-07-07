@@ -1,0 +1,42 @@
+.player{
+	display: flex;
+	height: 0px;
+	padding: 0 10px;
+	border-top: 1px solid #e5e5e5;
+	transform: translateZ(0);
+	.img{
+		margin-right: 10px;
+		img{
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+		}
+	}
+	.desc{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		.title{
+			font-size: 16px;
+			font-weight: 700;
+		}
+		.singer{
+			font-size: 14px;
+		}
+	}
+	.play,.list{
+		width: 55px;
+		height: 55px;
+		line-height: 55px;
+		text-align: center;
+		img{
+			vertical-align: middle;
+			width: 26px;
+			height: 26px;
+		}
+	}
+}

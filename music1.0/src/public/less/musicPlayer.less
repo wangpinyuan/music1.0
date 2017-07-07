@@ -1,0 +1,131 @@
+.musicPlayer{
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	height: 0;
+	width: 100%;
+	z-index: 999;
+	color: #808080;
+	overflow: hidden;
+	transition: all .1s linear;
+	.musicInfo{
+		flex: 0 0 70px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		text-align: center;
+		z-index: 1000;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		.title{
+			font-size: 24px;
+		}
+		.singer{
+			font-size: 14px;
+		}
+	}
+	.musicLrc {
+		flex: 1;
+		position: relative;
+		text-align: center;
+		overflow: auto;
+		font-size: 16px;
+		line-height: 36px;
+		z-index: 1000;
+		img{
+		    width: 65%;
+		    border-radius: 50%;
+		    margin-top: 10%;
+		}
+		// .rotation{
+		//     animation: rotation 30s linear infinite;
+		//     @keyframes rotation{
+		// 	    from {-webkit-transform: rotate(0deg);}
+		// 	    to {-webkit-transform: rotate(360deg);}
+		//     }
+		// }
+	}
+	.musicProgress {
+		flex: 0 0 30px;
+		display: flex;
+		z-index: 1000;
+		padding: 0 20px;
+		.progress{
+			flex: 1;
+			margin: 0 20px;
+			position: relative;
+			.progress-bg{
+				position: absolute;
+				height: 2px;
+				background-color: rgba(0, 0, 0, 0.1);
+				width: 100%;
+				top: 14px;
+			}
+			.progress-load{
+				position: absolute;
+				height: 2px;
+				top: 14px;
+				background-color: #000;
+				// transition: all 1s linear;
+			}
+		}
+		.currentTime,.totalTime{
+			font-size: 12px;
+			line-height: 30px;
+		}
+	}
+	.musicControl {
+		flex: 0 0 80px;
+		display: flex;
+		justify-content:space-around;
+		z-index: 1000;
+		line-height: 80px;
+		.go{
+			img{
+				width: 42px;
+				height: 42px;
+			}
+		}
+		img{
+			vertical-align: middle;
+			width: 22px;
+			height: 22px;
+		}
+	}
+	.bg{
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 998;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;	
+		-webkit-filter: blur(15px);
+		-webkit-transform: scale(1.15);
+	}
+	.mark{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		background-color: #fff;
+		opacity: 0.7;
+	}
+	.back{
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		z-index: 1000;
+		img{
+			width: 22px;
+			height: 22px;
+			
+		}
+	}
+}
